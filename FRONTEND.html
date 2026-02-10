@@ -19,37 +19,6 @@
   <button>Find Best Market</button>
 
   <p><i>Prototype version using mock data</i></p>
-
-
-  <div id="mandiList"></div>
-
-<script>
-fetch("https://opensheet.elk.sh/1eHH6YpK7iBSp6jWHnEiZTJYqElANEAcbIbf46bqkW0A/Sheet1")
-  .then(res => res.json())
-  .then(data => {
-
-    const container = document.getElementById("mandiList");
-    container.innerHTML = "";
-
-    data.forEach(item => {
-
-      const card = document.createElement("div");
-      card.style.border = "1px solid #ddd";
-      card.style.padding = "10px";
-      card.style.margin = "8px";
-
-      card.innerHTML = `
-        <b>${item.mandi}</b><br>
-        Crop: ${item.crop}<br>
-        Price: ₹${item.price_per_kg} / kg<br>
-        District: ${item.district}
-      `;
-
-      container.appendChild(card);
-    });
-
-  });
-</script>
-
+  
 </body>
 </html>
